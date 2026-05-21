@@ -170,6 +170,8 @@ def main():
     print(f"Serving '{serve_dir}' on port {args.port}")
     print(f"  Download:  curl http://localhost:{args.port}/<filename> -O")
     print(f"  Upload:    curl -X POST http://localhost:{args.port}/ -F 'file=@<path>'")
+    print(f"  [Windows] Download:  iwr http://<ip address>:{args.port}/<filename> -OutFile <filename>")
+    print(f"  [Windows] Upload:    iwr http://<ip address>:{args.port}/ -Method Post -InFile <path> -ContentType application/octet-stream")
     print("Press Ctrl+C to stop.\n")
 
     try:
